@@ -790,6 +790,7 @@ address {
 }
 .checkbox-link {
   color: var(--active-color);
+  margin-left: 5px;
 }
 
 .input-icon {
@@ -803,13 +804,17 @@ address {
 .input-icon:active {
   fill: var(--active-color);
 }
+
+.modal-input:focus + .input-icon {
+  fill: var(--active-color);
+}
+
 .input-wrapper {
   position: relative;
 }
 .input-footer {
   display: flex;
   flex-direction: row;
-  
 }
 .input-email {
   width: 358px;
@@ -837,7 +842,6 @@ address {
   letter-spacing: 0.06em;
   color: var(--white-color);
   margin-left: 12px;
- 
 }
 .button-footer:hover,
 .button-footer:focus {
@@ -853,5 +857,26 @@ address {
   display: flex;
   justify-content: center;
   align-content: center;
+}
+.checkbox-agree {
+  display: flex;
+  align-items: center;
+}
 
+.checkbox-agree::before {
+  content: " ";
+  margin-right: 8px;
+  display: flex;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: 2px solid var(--main-color);
+}
+
+.check-line input:checked + .checkbox-agree::before {
+  background: var(--active-color);
+  border: none;
+  background-image: url(../image/check-mark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }

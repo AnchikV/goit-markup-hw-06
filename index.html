@@ -546,17 +546,19 @@
               ></textarea>
             </label>
           </div>
-
-          <label>
-            <input
+<div class="check-line">
+           <input
               type="checkbox"
               name="agreement"
               value=""
-              class="input-checkbox"
-            />
+              class="visually-hidden"
+              id="checkbox-agree"
+            /> 
+            <label for="checkbox-agree" class="checkbox-agree">
             Погоджуюся з розсилкою та приймаю
             <a href="" class="checkbox-link">Умови договору</a>
           </label>
+          </div>
           <button type="submit" class="button-submit">Відправити</button>
         </form>
         <button data-modal-close class="modal-button" type="button">
