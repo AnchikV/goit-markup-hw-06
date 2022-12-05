@@ -307,14 +307,6 @@ address {
   margin-top: 20px;
 }
 
-.footer-item {
-  margin-right: 70px;
-  margin-top: 9px;
-}
-.footer-item:first-child {
-  margin-top: 0;
-}
-
 .button-p {
   font-weight: 500;
   font-size: 16px;
@@ -578,6 +570,14 @@ address {
   background-color: var(--active-color);
 }
 
+.footer-item {
+  margin-right: 70px;
+}
+
+.footer-item-subscribe {
+  margin-left: auto;
+}
+
 .footer-social-link {
   width: 100%;
   height: 100%;
@@ -632,7 +632,7 @@ address {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   min-width: 528px;
-  min-height: 581px;
+  
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -642,18 +642,28 @@ address {
 
 .modal-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 8px;
   cursor: pointer;
-  border: none;
+  
   border-radius: 50%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  top: 0;
+  
   width: 30px;
   height: 30px;
-  margin-top: 8px;
-  margin-right: 8px;
+
+  border: none;
+ 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-button:hover,
+.modal-button:focus {
+ fill: var(--active-color);
 }
 
 .svg-modal {
@@ -682,9 +692,9 @@ address {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-bottom: 10px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
   cursor: pointer;
-  padding-left: 30px;
+  padding-left: 45px;
 
   font-weight: 400;
   font-size: 12px;
@@ -706,12 +716,13 @@ address {
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: var(--text-color);
+  margin-bottom: 10px;
 }
 .label-feedback {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-
+  margin-top: 5px;
   font-weight: 400;
   font-size: 12px;
   line-height: calc(14 / 12);
@@ -722,7 +733,6 @@ address {
 }
 .modal-textarea {
   resize: none;
-  width: 448px;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -731,6 +741,8 @@ address {
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: var(--text-color);
+  margin-top: 4px;
+  padding: 12px 16px;
 }
 
 .modal-textarea:hover,
@@ -748,14 +760,7 @@ address {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.div-modal {
-  position: relative;
-}
 .button-submit {
-  position: absolute;
-  bottom: -3%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
 
   width: 200px;
   height: 50px;
@@ -765,14 +770,15 @@ address {
   line-height: calc(30 / 16);
   color: var(--white-color);
   cursor: pointer;
-  padding: 10px 52px;
+  
   border-radius: 4px;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  margin-top: 30px;
-  margin-bottom: 40px;
+  margin: 30px auto 0;
+  display: block;
+  
 }
 
 .button-submit:hover,
@@ -798,10 +804,16 @@ address {
   left: 5px;
   top: 50%;
   transform: translatey(-50%);
+  margin-left: 15px;
 }
+
 .input-icon:hover,
 .input-icon:focus,
 .input-icon:active {
+  fill: var(--active-color);
+}
+
+.modal-input:hover + .input-icon {
   fill: var(--active-color);
 }
 
@@ -811,6 +823,7 @@ address {
 
 .input-wrapper {
   position: relative;
+  margin-top: 4px;
 }
 .input-footer {
   display: flex;
@@ -831,33 +844,34 @@ address {
   padding-left: 16px;
 }
 .button-footer {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 50px;
   background: var(--active-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
   color: var(--white-color);
   margin-left: 12px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .button-footer:hover,
 .button-footer:focus {
   background: var(--active-button-background);
 }
+
 .icon-send {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translatey(-50%);
+  margin-left: 10px;
 }
-.button-svg {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
+
 .checkbox-agree {
   display: flex;
   align-items: center;
