@@ -535,7 +535,6 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-color);
-  margin-top: 12px;
   margin-bottom: 20px;
   text-align: left;
 }
@@ -543,6 +542,7 @@ address {
   display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
+  align-items: baseline;
 }
 
 .footer-icons {
@@ -632,7 +632,7 @@ address {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   min-width: 528px;
-  
+
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -645,17 +645,15 @@ address {
   top: 8px;
   right: 8px;
   cursor: pointer;
-  
+
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  
+
   width: 30px;
   height: 30px;
 
-  border: none;
- 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -663,7 +661,7 @@ address {
 
 .modal-button:hover,
 .modal-button:focus {
- fill: var(--active-color);
+  fill: var(--active-color);
 }
 
 .svg-modal {
@@ -692,22 +690,24 @@ address {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
   cursor: pointer;
   padding-left: 45px;
+  margin-bottom: 10px;
 
   font-weight: 400;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
   color: var(--text-color);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:hover,
 .modal-input:focus,
 .modal-input:active {
   outline: none;
-  border: 1px solid #2196f3;
+  border: 1px solid var(--active-color);
 }
 
 .modal-label {
@@ -743,12 +743,13 @@ address {
   color: var(--text-color);
   margin-top: 4px;
   padding: 12px 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea:hover,
 .modal-textarea:focus {
   outline: none;
-  border: 1px solid #2196f3;
+  border: 1px solid var(--active-color);
 }
 
 .modal-textarea:: placeholder {
@@ -761,7 +762,6 @@ address {
 }
 
 .button-submit {
-
   width: 200px;
   height: 50px;
   background: var(--active-color);
@@ -770,7 +770,7 @@ address {
   line-height: calc(30 / 16);
   color: var(--white-color);
   cursor: pointer;
-  
+
   border-radius: 4px;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -778,7 +778,6 @@ address {
 
   margin: 30px auto 0;
   display: block;
-  
 }
 
 .button-submit:hover,
@@ -825,10 +824,11 @@ address {
   position: relative;
   margin-top: 4px;
 }
+
 .input-footer {
   display: flex;
-  flex-direction: row;
 }
+
 .input-email {
   width: 358px;
   height: 50px;
@@ -875,6 +875,12 @@ address {
 .checkbox-agree {
   display: flex;
   align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--text-color);
 }
 
 .checkbox-agree::before {
