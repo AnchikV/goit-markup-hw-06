@@ -433,6 +433,7 @@ address {
 .footer-color {
   color: var(--footer-color);
 }
+
 .footer-studio {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
@@ -461,6 +462,7 @@ address {
   justify-content: center;
   margin-top: 28px;
 }
+
 .social-icon {
   fill: var(--icon-color);
 }
