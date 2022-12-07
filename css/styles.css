@@ -697,7 +697,6 @@ address {
   border-radius: 4px;
   cursor: pointer;
   padding-left: 45px;
-  margin-bottom: 10px;
 
   font-weight: 400;
   font-size: 12px;
@@ -727,7 +726,6 @@ address {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  margin-top: 5px;
   font-weight: 400;
   font-size: 12px;
   line-height: calc(14 / 12);
@@ -809,6 +807,8 @@ address {
   top: 50%;
   transform: translatey(-50%);
   margin-left: 15px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-icon:hover,
@@ -828,6 +828,7 @@ address {
 .input-wrapper {
   position: relative;
   margin-top: 4px;
+  margin-bottom: 10px;
 }
 
 .input-footer {
